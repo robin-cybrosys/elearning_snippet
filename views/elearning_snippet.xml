@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
+        <template id="custom_snippets" name="Custom Snippets">
+            <section class="s_references bg-gray-lighter">
+                <div class="container">
+                    <h3>
+                        <center>
+                            <b>Menu !!</b>
+                        </center>
+                    </h3>
+                    <div class="row">
+                        <div class="alert alert-success">
+                            <img src="elearning_snippet/static/src/img/1.jpg" class="img img-responsive " alt="Demo Logo 2"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="alert alert-danger">
+                            <img src="elearning_snippet/static/src/img/2.jpg" class="img img-responsive" alt="Demo"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </template>
 
     </data>
 </odoo>

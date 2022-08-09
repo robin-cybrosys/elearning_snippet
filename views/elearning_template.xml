@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
-
+        <template id="custom_snippets_web_snippets" 
+        inherit_id="website.snippets" name="Custom Snippets">
+            <xpath expr="//div[@id='snippet_structure']" position="inside">
+                <div class="o_panel_body">
+                    <t t-snippet="custom_snippet.custom_snippets" t-thumbnail="elearning_snippet/static/src/img/1.jpg" />
+                </div>
+            </xpath>
+        </template>
     </data>
 </odoo>
