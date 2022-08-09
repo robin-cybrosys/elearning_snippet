@@ -1,21 +1,12 @@
-# -*- coding: utf-8 -*-
-# from odoo import http
+from odoo import http
+from odoo.http import request
 
 
-# class ElearningSnippet(http.Controller):
-#     @http.route('/elearning_snippet/elearning_snippet', auth='public')
-#     def index(self, **kw):
-#         return "Hello, world"
-
-#     @http.route('/elearning_snippet/elearning_snippet/objects', auth='public')
-#     def list(self, **kw):
-#         return http.request.render('elearning_snippet.listing', {
-#             'root': '/elearning_snippet/elearning_snippet',
-#             'objects': http.request.env['elearning_snippet.elearning_snippet'].search([]),
-#         })
-
-#     @http.route('/elearning_snippet/elearning_snippet/objects/<model("elearning_snippet.elearning_snippet"):obj>', auth='public')
-#     def object(self, obj, **kw):
-#         return http.request.render('elearning_snippet.object', {
-#             'object': obj
-#         })
+class Sales(http.Controller):
+    @http.route(['/total_product_sold'], type="json", auth="public")
+    def sold_total(self):
+        sale_obj = request.env['sale.order'].sudo().search([
+            ('state', 'in', ['done', 'sale']),
+        ])
+        total_sold = sum(sale_obj.mapped('order_line.product_uom_qty'))
+        return total_sold

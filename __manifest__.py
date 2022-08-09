@@ -12,4 +12,9 @@
         'views/elearning_snippet.xml',
         'views/elearning_template.xml',
     ],
+    'assets': {
+        'web.assets_frontend': [
+            '/elearning_snippet/static/src/js/dynamic.js',
+        ],
+    },
 }

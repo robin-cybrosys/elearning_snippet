@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="custom_snippets_web_snippets" 
-        inherit_id="website.snippets" name="Custom Snippets">
-            <xpath expr="//div[@id='snippet_structure']" position="inside">
-                <div class="o_panel_body">
-                    <t t-snippet="custom_snippet.custom_snippets" t-thumbnail="elearning_snippet/static/src/img/1.jpg" />
+        <!--static snippet-->
+        <template id="custom_snippets" name="E-Learning Snippet">
+            <section class="s_references bg-gray-lighter">
+                <div class="container">
+                    <br/>
+                    <h2>
+                        <center>
+                            <b>Latest E-Learning Courses</b>
+                        </center>
+                    </h2>
+                    <br/>
+                    <div class="row">
+
+                        <div class="alert alert-success col-md-4">
+                            <img src="elearning_snippet/static/src/img/1.jpg" class="img img-responsive " alt="Demo Logo 1"/>
+                        </div>
+                        <div class="alert alert-danger col-md-4">
+                            <img src="elearning_snippet/static/src/img/2.jpg" class="img img-responsive" alt="Demo Logo 2"/>
+                        </div>
+                        <div class="alert alert-success col-md-4">
+                            <img src="elearning_snippet/static/src/img/3.jpg" class="img img-responsive " alt="Demo Logo 3"/>
+                        </div>
+
+                    </div>
                 </div>
-            </xpath>
+            </section>
         </template>
+        
+        <!--dynamic1-->
+        <!--        <template id="dynamic_snippet_demo" name="Dynamic Snippet">-->
+        <!--            <section class="container dynamic_snippet_blog">-->
+        <!--                <div class="row">-->
+        <!--                    <div class="col-md-12">-->
+        <!--                        <h1>Dynamic Snippet</h1>-->
+        <!--               Total Products Sold: <span id="total_sold"/>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </section>-->
+        <!--        </template>-->
+
     </data>
 </odoo>
