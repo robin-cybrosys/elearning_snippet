@@ -3,7 +3,7 @@
     <data>
         <!--static snippet-->
         <template id="custom_snippets" name="E-Learning Snippet">
-            <section class="s_references bg-gray-lighter">
+            <section class="s_references bg-gray-lighter elearn_dynamic">
                 <div class="container">
                     <br/>
                     <h2>
@@ -15,20 +15,42 @@
                     <div class="row">
 
                         <div class="alert alert-success col-md-4">
-                            <img src="elearning_snippet/static/src/img/1.jpg" class="img img-responsive " alt="Demo Logo 1"/>
+                            <a href="/slides/7">
+                                <img src="/web/image/slide.channel/7/image_1920/" width='330px' height='200px' altclass="img img-responsive" alt="hyperink-odoo" />
+                               <t t-esc="promote_strategy"/>
+                            </a>
+                            <center>
+                            <a href="/course1">
+                                <h3 name="course1" t-att-value="4" id="course1"/>
+                                    </a>
+                            </center>
+
                         </div>
                         <div class="alert alert-danger col-md-4">
-                            <img src="elearning_snippet/static/src/img/2.jpg" class="img img-responsive" alt="Demo Logo 2"/>
+
+                            <a href="/slides/6">
+                                <img src="/web/image/slide.channel/6/image_1920/" width='330px' height='200px' class="img img-responsive" alt="hyperink-odoo" />
+                            </a>
+                            <center>
+                                <h3 id="course2"/>
+                            </center>
+
                         </div>
                         <div class="alert alert-success col-md-4">
-                            <img src="elearning_snippet/static/src/img/3.jpg" class="img img-responsive " alt="Demo Logo 3"/>
+                            <a href="/slides/5">
+                                <img src="/web/image/slide.channel/5/image_1920/" width='330px' height='200px' class="img img-responsive" alt="hyperink-odoo" />
+                            </a>
+                            <center>
+                                <h3 id="course3"/>
+                            </center>
+
                         </div>
 
                     </div>
                 </div>
             </section>
         </template>
-        
+
         <!--dynamic1-->
         <!--        <template id="dynamic_snippet_demo" name="Dynamic Snippet">-->
         <!--            <section class="container dynamic_snippet_blog">-->
