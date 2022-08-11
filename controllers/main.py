@@ -7,26 +7,33 @@ class ELearning(http.Controller):
     def elearning_snippet(self):
         course_obj = request.env['slide.channel'].sudo().search(
             [], order='create_date DESC', limit=3)
-        li = []
-        for item in course_obj:
-            vals = {"courses": item.name,
-                    "promote_strategy": item.promote_strategy,
-                    "description": item.description_short
-                    }
-            li.append(vals)
-        return li
-        # print(li)
+        # course_id=request.env['slide.channel'].sudo().search([])
         # li = []
         # for item in course_obj:
-        #     print(item)
-        #     li.append(item)
-        #     vals = {"courses": item.name}
+        # name=item.name
+        # vals = {"courses": course_obj}
+        # li.append(vals)
         # print(li)
-        # return json_string
-    @http.route(['/course1'], type='http', auth='public',
-                website=True)
-    def click(self, **post):
-        # id = post['course1']
-        return request.redirect(
-            "slides/"+str(1))
-    
+        # print(vals)
+        # return vals
+
+        # last working
+        li = []
+        for item in course_obj:
+            print(item)
+            # name = item.name
+            course1 = {"course_name": item.name,
+                       "course_id": item.id,
+                       "promote_strategy": item.promote_strategy,
+                       "description": item.description_short
+                       }
+            li.append(course1)
+        print(li)
+        return li
+
+    # @http.route(['/course1'], type='http', auth='public',
+    #             website=True)
+    # def click(self, **post):
+    #     # id = post['course1']
+    #     return request.redirect(
+    #         "slides/"+str(1))

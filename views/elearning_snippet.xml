@@ -1,9 +1,10 @@
 <!-- This XML file does not appear to have any style information associated with it. The document tree is shown below. -->
 <odoo>
     <data>
-        <!-- static snippet -->
+        <!--snippet -->
         <template id="custom_snippets_web_snippets" inherit_id="website.snippets">
-            <xpath expr="//div[@id='snippet_structure']//t[@t-snippet][last()]" position="after">
+            <xpath expr="//div[@id='snippet_structure']//t[@t-snippet]" position="before">
+            <!-- [last()] -->
                 <t t-snippet="elearning_snippet.custom_snippets" t-thumbnail="elearning_snippet/static/src/img/elearning.png"/>
             </xpath>
         </template>

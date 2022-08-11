@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!--static snippet-->
-        <template id="custom_snippets" name="E-Learning Snippet">
+        <!--snippet-->
+        <!-- <template id="custom_snippets" name="E-Learning Snippet">
             <section class="s_references bg-gray-lighter elearn_dynamic">
                 <div class="container">
                     <br/>
@@ -14,54 +14,114 @@
                     <br/>
                     <div class="row">
 
-                        <div class="alert alert-success col-md-4">
+                        <div class="col-md-4">
                             <a href="/slides/7">
                                 <img src="/web/image/slide.channel/7/image_1920/" width='330px' height='200px' altclass="img img-responsive" alt="hyperink-odoo" />
-                               <t t-esc="promote_strategy"/>
+                                <t t-esc="promote_strategy"/>
                             </a>
                             <center>
-                            <a href="/course1">
-                                <h3 name="course1" t-att-value="4" id="course1"/>
-                                    </a>
+                                <a href="/slides/">
+                                    <h3 name="course1" id="course1">Data:
+                                    </h3>
+                                </a>
                             </center>
 
                         </div>
-                        <div class="alert alert-danger col-md-4">
+                        <div class="col-md-4">
 
                             <a href="/slides/6">
                                 <img src="/web/image/slide.channel/6/image_1920/" width='330px' height='200px' class="img img-responsive" alt="hyperink-odoo" />
+                                <center>
+                                    <h3 id="course2">
+                                    </h3>
+                                    <select name="name" t-attf-class="form-control s_website_form_input" required="1">
+                                    <t t-foreach="li" t-as="list"> -->
+
+        <!-- <t t-foreach="list" t-as="courses">
+                                        <t t-foreach="courses" t-as="course">-->
+        <!-- <option t-att-value="list">
+                                                <t t-esc="list"/>
+                                            </option> -->
+        <!-- </t>
+                                        </t> -->
+
+        <!-- </t>
+                                    </select>
+                                </center>
                             </a>
-                            <center>
-                                <h3 id="course2"/>
-                            </center>
 
                         </div>
-                        <div class="alert alert-success col-md-4">
+                        <div class="col-md-4">
                             <a href="/slides/5">
                                 <img src="/web/image/slide.channel/5/image_1920/" width='330px' height='200px' class="img img-responsive" alt="hyperink-odoo" />
-                            </a>
                             <center>
                                 <h3 id="course3"/>
                             </center>
-
+                            </a>
                         </div>
-
                     </div>
                 </div>
             </section>
-        </template>
+        </template> -->
 
         <!--dynamic1-->
-        <!--        <template id="dynamic_snippet_demo" name="Dynamic Snippet">-->
-        <!--            <section class="container dynamic_snippet_blog">-->
-        <!--                <div class="row">-->
-        <!--                    <div class="col-md-12">-->
-        <!--                        <h1>Dynamic Snippet</h1>-->
-        <!--               Total Products Sold: <span id="total_sold"/>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </section>-->
-        <!--        </template>-->
+        <template id="custom_snippets" name="E-Learning Snippet">
+            <!-- section Blog starts here -->
+            <section class="blog_index elearn_dynamic">
+                <div class="heading">
+                    <br/>
+                    <center>
+                        <h2 class="main">
+                            <b>Latest E-Learning Courses</b>
+                        </h2>
+                    </center>
+                    <br/>
+                </div>
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card-deck">
+                                <div class="col-lg-4 col-md-6  col-12 p-0 ">
+                                    <div class="card ">
+                                        <img class="card-img-top" src="/web/image/slide.channel/7/image_1920/" alt="Card image cap" height='200px' />
+                                        <div class="card-body">
+                                            <div class="wrapper">
+                                                <h5 id="course1" class="card-title"> </h5>
+                                                <a href="/slides/7" class="btn btn-dp">More Details</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+<!--                                <div class="col-lg-4 col-md-6  col-12 p-0">-->
+<!--                                    <div class="card ">-->
+<!--                                        <img class="card-img-top" src="/web/image/slide.channel/6/image_1920/" alt="Card image cap" height='200px'/>-->
+<!--                                        <div class="card-body">-->
+<!--                                            <div class="wrapper">-->
+<!--                                                <h5 id="course2" class="card-title"></h5>-->
+<!--                                                <a href="/slides/6" class="btn btn-dp">More Details</a>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="col-lg-4 col-md-6  col-12 p-0">-->
+<!--                                    <div class="card">-->
+<!--                                        <img class="card-img-top" src="/web/image/slide.channel/5/image_1920/" alt="Card image cap" height='200px' />-->
+<!--                                        <div class="card-body">-->
+<!--                                            <div class="wrapper">-->
+<!--                                                <h5 id="course3" class="card-title"></h5>-->
+<!--                                                <a href="/slides/5" class="btn btn-dp">More Details</a>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- section Blog ends here -->
+        </template>
+
 
     </data>
 </odoo>
