@@ -1,0 +1,88 @@
+<!-- This XML file does not appear to have any style information associated with it. The document tree is shown below. -->
+<odoo>
+    <data>
+        <!--snippet -->
+        <template id="custom_web_snippets" inherit_id="website.snippets">
+            <xpath expr="//div[@id='snippet_effect']//t[@t-snippet]"
+                   position="before">
+                <t t-snippet="elearning_snippet.elearning_snippets"
+                   t-thumbnail="elearning_snippet/static/src/img/elearning.png"/>
+            </xpath>
+        </template>
+
+
+        <!--dynamic1-->
+        <template id="elearning_snippets" name="E-Learning Snippet">
+            <!-- section Blog starts here -->
+            <section class="oe-structure elearn_dynamic">
+                <div class="heading">
+                    <br/>
+                    <center>
+                        <h2 class="main">
+                            <b>Latest E-Learning Courses</b>
+                        </h2>
+                    </center>
+                    <br/>
+                </div>
+                <!-- <div class="wrapper"> -->
+                <div class="container">
+                    <div class="row" id="main">
+                        <div class="card-deck">
+                            <div class="col-md-4  col-12 p-0 ">
+                                <div class="card ">
+                                    <img class="card-img-top"
+                                         src="/web/image/slide.channel/7/image_1920/"
+                                         alt="Card image cap" height='200px'/>
+                                    <div class="card-body">
+                                        <div class="wrapper">
+                                            <h5 id="course1"
+                                                class="card-title"></h5>
+                                            <a href="/slides/7"
+                                               class="btn btn-dp">More Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6  col-12 p-0">
+                                <div class="card ">
+                                    <img class="card-img-top"
+                                         src="/web/image/slide.channel/6/image_1920/"
+                                         alt="Card image cap" height='200px'/>
+                                    <div class="card-body">
+                                        <div class="wrapper">
+                                            <h5 id="course2"
+                                                class="card-title"></h5>
+                                            <a href="/slides/6"
+                                               class="btn btn-dp">More Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6  col-12 p-0">
+                                <div class="card">
+                                    <img class="card-img-top"
+                                         src="/web/image/slide.channel/5/image_1920/"
+                                         alt="Card image cap" height='200px'/>
+                                    <div class="card-body">
+                                        <div class="wrapper">
+                                            <h5 id="course3"
+                                                class="card-title"></h5>
+                                            <a href="/slides/5"
+                                               class="btn btn-dp">More Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+            <!-- section Blog ends here -->
+        </template>
+
+    </data>
+</odoo>

@@ -13,9 +13,9 @@ class ELearning(http.Controller):
         # for item in course_obj:
         # name=item.name
         vals = {"courses": course_obj}
-        response = http.Response(template='elearning_snippet.custom_snippets',
-                                 qcontext=vals)
-        return response.render()
+        # response = http.Response(template='elearning_snippet.elearning_snippets',
+        #                          qcontext=vals)
+        return vals
         # li.append(vals)
         # print(li)
         # print(vals)

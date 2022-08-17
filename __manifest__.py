@@ -9,8 +9,8 @@
     'version': '15.0.1.0.0',
     'depends': ['base','web','website_slides'],
     'data': [
-        'views/elearning_snippet.xml',
-        # 'views/elearning_template.xml',
+        'snippets/elearning_snippet.xml',
+        # 'snippets/elearning_template.xml',
     ],
     'assets': {
         'web.assets_frontend': [
