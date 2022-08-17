@@ -9,22 +9,16 @@ odoo.define("elearning_snippet.dynamic", function (require) {
     start: function () {
       var self = this;
       ajax.jsonRpc("/elearning/snippet", "call", {}).then(function (vals) {
+      if (vals){
         console.log(vals, "test");
-        console.log(vals.courses, "test");
-        // var items;
-        // items = li.forEach(function (item) {
-          // console.log(item);
-           self.$("#course1").text(vals.courses);
-        // });
-
-        // console.log(items, "fdddddddd");
-        //  self.$('#course1').text(Object.values(li[0])[0]);
-        //  self.$('#course2').text(Object.values(li[1])[0]);
-        //  self.$('#course3').text(Object.values(li[2])[0]);
+        console.log(vals.courses, "test2");
+//        self.$el.find("#course1").html(vals.courses);
+      }
         console.log("worked");
       });
     },
   });
+
   var originalColors = [];
   console.log(originalColors);
   console.log(Colors);

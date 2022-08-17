@@ -10,7 +10,7 @@
     'depends': ['base','web','website_slides'],
     'data': [
         'views/elearning_snippet.xml',
-        'views/elearning_template.xml',
+        # 'views/elearning_template.xml',
     ],
     'assets': {
         'web.assets_frontend': [
