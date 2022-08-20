@@ -18,25 +18,25 @@ class ELearning(http.Controller):
                 ['name', 'description_short', 'slide_last_update',
                                'id'])[0]
             items['image'] = request.env['website'].image_url(course,
-                                                              'image_512')
+                                                              'image_1920')
 
             courses.append(items)
-        # print(courses)
-        # grouping the sold products
-        sold_group = []
-        sold_list = []
+        print(courses)
+        # grouping the courses for listing in group
+        course_group = []
+        course_list = []
         for index, record in enumerate(courses, 1):
-            sold_list.append(record)
+            course_list.append(record)
             if index % products_per_slide == 0:
-                sold_group.append(sold_list)
-                sold_list = []
-        if any(sold_list):
-            sold_group.append(sold_list)
+                course_group.append(course_list)
+                course_list = []
+        if any(course_list):
+            course_group.append(course_list)
 
         values = {
-            "objects": sold_group,
+            "objects": course_group,
             "products_per_slide": products_per_slide,
-            "num_slides": len(sold_group),
+            "num_slides": len(course_group),
             "uniqueId": "pc-%d" % int(time.time() * 10000),
         }
         response = http.Response(

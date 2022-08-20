@@ -62,7 +62,7 @@
                                                                     <t t-foreach="courses"
                                                                        t-as="data">
                                                                         <div class="col-lg-3 col-md-4 col-sm-6 col-12 filter hdpe">
-                                                                            <a t-attf-href="/shop/product/#{data['id']}">
+                                                                            <a t-attf-href="/slides/#{data['id']}">
                                                                                 <div class="col-lg-6 align-items-center">
                                                                                     <div class="container">
                                                                                         <img class="img img-fluid mx-auto rounded"
@@ -73,19 +73,17 @@
                                                                                 <div class="img_details">
                                                                                     <h5 class="course_name">
                                                                                         <a class="add_to_cart"
-                                                                                           t-attf-href="/shop/product/#{data['id']}">
+                                                                                           t-attf-href="/slides/#{data['id']}">
                                                                                             <span t-if="data"
                                                                                                   t-esc="data['name']"/>
                                                                                         </a>
                                                                                     </h5>
-                                                                                    <div class="price">
-                                                                                        <div class="price">
-                                                                                            <span t-if="data"
-                                                                                                  t-esc="res_company.currency_id.symbol"/>
+                                                                                        <div class="description">
+<!--                                                                                            <span t-if="data"-->
+<!--                                                                                                  t-esc="res_company.currency_id.symbol"/>-->
                                                                                             <span t-if="data"
                                                                                                   t-esc="data['description_short']"/>
                                                                                         </div>
-                                                                                    </div>
                                                                                 </div>
                                                                             </a>
                                                                         </div>
