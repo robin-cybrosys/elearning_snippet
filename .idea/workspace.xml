@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab91fdb9-5dee-4071-8ff5-e09d96fa87f4" name="Changes" comment="aug20::commit before mods" />
+    <list default="true" id="ab91fdb9-5dee-4071-8ff5-e09d96fa87f4" name="Changes" comment="aug20::commit before changing cols" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660979351840</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="aug20::commit before changing cols">
+      <created>1660980220366</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660980220366</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -116,6 +123,7 @@
     <MESSAGE value="aug:11::commit after work" />
     <MESSAGE value="aug:17::commit before mods" />
     <MESSAGE value="aug20::commit before mods" />
-    <option name="LAST_COMMIT_MESSAGE" value="aug20::commit before mods" />
+    <MESSAGE value="aug20::commit before changing cols" />
+    <option name="LAST_COMMIT_MESSAGE" value="aug20::commit before changing cols" />
   </component>
 </project>
