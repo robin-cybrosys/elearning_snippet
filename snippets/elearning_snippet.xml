@@ -13,7 +13,7 @@
 
         <!--dynamic1-->
         <template id="elearning_snippets" name="E-Learning Snippet">
-            <!-- section Blog starts here -->
+            <!-- section  starts here -->
             <section class="oe-structure elearn_dynamic">
                 <div class="heading">
                     <br/>
@@ -24,54 +24,88 @@
                     </center>
                     <br/>
                 </div>
-                <!-- <div class="wrapper"> -->
-                <div class="container">
-                    <div class="row" id="main">
-                        <div class="card-deck">
-                            <div class="col-md-4  col-12 p-0 ">
-                                <div class="card ">
-                                    <img class="card-img-top"
-                                         src="/web/image/slide.channel/7/image_1920/"
-                                         alt="Card image cap" height='200px'/>
-                                    <div class="card-body">
-                                        <div class="wrapper">
-                                            <h5 id="course1"
-                                                class="card-title"></h5>
-                                            <a href="/slides/7"
-                                               class="btn btn-dp">More Details
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6  col-12 p-0">
-                                <div class="card ">
-                                    <img class="card-img-top"
-                                         src="/web/image/slide.channel/6/image_1920/"
-                                         alt="Card image cap" height='200px'/>
-                                    <div class="card-body">
-                                        <div class="wrapper">
-                                            <h5 id="course2"
-                                                class="card-title"></h5>
-                                            <a href="/slides/6"
-                                               class="btn btn-dp">More Details
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6  col-12 p-0">
-                                <div class="card">
-                                    <img class="card-img-top"
-                                         src="/web/image/slide.channel/5/image_1920/"
-                                         alt="Card image cap" height='200px'/>
-                                    <div class="card-body">
-                                        <div class="wrapper">
-                                            <h5 id="course3"
-                                                class="card-title"></h5>
-                                            <a href="/slides/5"
-                                               class="btn btn-dp">More Details
-                                            </a>
+                <div class="wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="tile" id="content">
+
+                                <div class="tab-content gap">
+                                    <div class="tab-pane fade show active"
+                                         id="sold"
+                                         role="tabpanel"
+                                         aria-labelledby="sold-tab">
+                                        <div class="course_carousel_slider oe_website_sale">
+                                            <input type="hidden"
+                                                   name="course_count"
+                                                   t-if="objects"
+                                                   t-att-value="len(objects)"/>
+                                            <div t-att-id="uniqueId"
+                                                 class="carousel slide d-flex"
+                                                 data-ride="carousel">
+                                                <a class="o_course_carousel_control carousel-control-prev position-relative"
+                                                   t-att-href="'#' + uniqueId"
+                                                   role="button"
+                                                   data-slide="prev"
+                                                   t-if="num_slides">
+                                                    1 >
+                                                    <i class="fa fa-2x fa-chevron-left text-black-50"/>
+                                                    <span class="sr-only">
+                                                        Previous
+                                                    </span>
+                                                </a>
+                                                <div class="carousel-inner">
+                                                    <t t-foreach="objects"
+                                                       t-as="courses">
+                                                        <div t-attf-class="carousel-item #{'' if courses_index else 'active'}">
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <t t-foreach="courses"
+                                                                       t-as="data">
+                                                                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 filter hdpe">
+                                                                            <a t-attf-href="/shop/product/#{data['id']}">
+                                                                                <div class="col-lg-6 align-items-center">
+                                                                                    <div class="container">
+                                                                                        <img class="img img-fluid mx-auto rounded"
+                                                                                             t-att-src="data['image']"
+                                                                                             style="padding: 0px; margin: 0px; height: 232px; width: 1200px;"/>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="img_details">
+                                                                                    <h5 class="course_name">
+                                                                                        <a class="add_to_cart"
+                                                                                           t-attf-href="/shop/product/#{data['id']}">
+                                                                                            <span t-if="data"
+                                                                                                  t-esc="data['name']"/>
+                                                                                        </a>
+                                                                                    </h5>
+                                                                                    <div class="price">
+                                                                                        <div class="price">
+                                                                                            <span t-if="data"
+                                                                                                  t-esc="res_company.currency_id.symbol"/>
+                                                                                            <span t-if="data"
+                                                                                                  t-esc="data['description_short']"/>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </div>
+                                                                    </t>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                </div>
+                                                <a class="o_course_carousel_control carousel-control-next position-relative"
+                                                   t-att-href="'#' + uniqueId"
+                                                   role="button"
+                                                   data-slide="next"
+                                                   t-if="num_slides">
+                                                    1 >
+                                                    <i class="fa fa-2x fa-chevron-right text-black-50"/>
+                                                    <span class="sr-only">Next
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -79,9 +113,93 @@
                         </div>
                     </div>
                 </div>
+
+                <!--                <div class="wrapper">-->
+                <!--                    <div class="container">-->
+                <!--                        <div class="row" id="main">-->
+                <!--                            <div class="card-deck">-->
+                <!--                                <div class="col-md-4  col-12 p-0 ">-->
+                <!--                                    <div class="card ">-->
+                <!--                                        <img class="card-img-top"-->
+                <!--                                             src="/web/image/slide.channel/7/image_1920/"-->
+                <!--                                             alt="Card image cap"-->
+                <!--                                             height='200px'/>-->
+                <!--                                        <div class="card-body">-->
+                <!--                                            <div class="wrapper">-->
+                <!--                                                <h5 id="course1"-->
+                <!--                                                    class="card-title"></h5>-->
+                <!--                                                <a href="/slides/7"-->
+                <!--                                                   class="btn btn-dp">More-->
+                <!--                                                    Details-->
+                <!--                                                </a>-->
+                <!--                                            </div>-->
+                <!--                                        </div>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+
+                <!--            old start    -->
+                <!-- <div class="wrapper"> -->
+                <!--                <div class="container">-->
+                <!--                    <div class="row" id="main">-->
+                <!--                        <div class="card-deck">-->
+                <!--                            <div class="col-md-4  col-12 p-0 ">-->
+                <!--                                <div class="card ">-->
+                <!--                                    <img class="card-img-top"-->
+                <!--                                         src="/web/image/slide.channel/7/image_1920/"-->
+                <!--                                         alt="Card image cap" height='200px'/>-->
+                <!--                                    <div class="card-body">-->
+                <!--                                        <div class="wrapper">-->
+                <!--                                            <h5 id="course1"-->
+                <!--                                                class="card-title"></h5>-->
+                <!--                                            <a href="/slides/7"-->
+                <!--                                               class="btn btn-dp">More Details-->
+                <!--                                            </a>-->
+                <!--                                        </div>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                            <div class="col-lg-4 col-md-6  col-12 p-0">-->
+                <!--                                <div class="card ">-->
+                <!--                                    <img class="card-img-top"-->
+                <!--                                         src="/web/image/slide.channel/6/image_1920/"-->
+                <!--                                         alt="Card image cap" height='200px'/>-->
+                <!--                                    <div class="card-body">-->
+                <!--                                        <div class="wrapper">-->
+                <!--                                            <h5 id="course2"-->
+                <!--                                                class="card-title"></h5>-->
+                <!--                                            <a href="/slides/6"-->
+                <!--                                               class="btn btn-dp">More Details-->
+                <!--                                            </a>-->
+                <!--                                        </div>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                            <div class="col-lg-4 col-md-6  col-12 p-0">-->
+                <!--                                <div class="card">-->
+                <!--                                    <img class="card-img-top"-->
+                <!--                                         src="/web/image/slide.channel/5/image_1920/"-->
+                <!--                                         alt="Card image cap" height='200px'/>-->
+                <!--                                    <div class="card-body">-->
+                <!--                                        <div class="wrapper">-->
+                <!--                                            <h5 id="course3"-->
+                <!--                                                class="card-title"></h5>-->
+                <!--                                            <a href="/slides/5"-->
+                <!--                                               class="btn btn-dp">More Details-->
+                <!--                                            </a>-->
+                <!--                                        </div>-->
+                <!--                                    </div>-->
+                <!--                                </div>-->
+                <!--                            </div>-->
+                <!--                        </div>-->
+                <!--                    </div>-->
+                <!--                </div>-->
                 <!-- </div> -->
+                <!--                old ends-->
             </section>
-            <!-- section Blog ends here -->
         </template>
 
     </data>
