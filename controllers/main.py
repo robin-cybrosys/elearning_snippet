@@ -16,7 +16,7 @@ class ELearning(http.Controller):
             # print(courses.read([]))
             items = course.read(
                 ['name', 'description_short', 'slide_last_update',
-                               'id'])[0]
+                 'create_date', 'id'])[0]
             items['image'] = request.env['website'].image_url(course,
                                                               'image_1920')
 

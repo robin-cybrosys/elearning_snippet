@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ab91fdb9-5dee-4071-8ff5-e09d96fa87f4" name="Changes" comment="aug20::commit after finalising">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippets/elearning_snippet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/elearning_snippet.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

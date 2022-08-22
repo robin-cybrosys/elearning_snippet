@@ -29,12 +29,16 @@
                                 <div>
                                     <div class="course_carousel_slider oe_website_sale">
                                         <input type="hidden" name="course_count"
-                                               t-if="objects" t-att-value="len(objects)"/>
-                                        <div t-att-id="uniqueId" class="carousel slide d-flex"
+                                               t-if="objects"
+                                               t-att-value="len(objects)"/>
+                                        <div t-att-id="uniqueId"
+                                             class="carousel slide d-flex"
                                              data-ride="carousel">
                                             <a class="o_course_carousel_control carousel-control-prev position-relative"
-                                               t-att-href="'#' + uniqueId" role="button"
-                                               data-slide="prev" t-if="num_slides"> 1 >
+                                               t-att-href="'#' + uniqueId"
+                                               role="button"
+                                               data-slide="prev"
+                                               t-if="num_slides">1 >
                                                 <i class="fa fa-2x fa-chevron-left text-black-50"/>
                                                 <span class="sr-only">
                                                     Previous
@@ -59,7 +63,7 @@
                                                                                 </div>
                                                                                 <div class="img_details">
                                                                                     <h5 class="course_name">
-                                                                                        <a class="add_to_cart"
+                                                                                        <a class="name"
                                                                                            t-attf-href="/slides/#{item['id']}">
                                                                                             <span t-if="item"
                                                                                                   t-esc="item['name']"/>
@@ -69,12 +73,19 @@
                                                                                         <span t-if="item"
                                                                                               t-esc="item['description_short']"/>
                                                                                     </div>
+                                                                                    <div class="created">
+                                                                                        <span t-if="item">
+                                                                                            Last update:
+                                                                                            <span t-esc="item['slide_last_update']"/>
+                                                                                        </span>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </a>
                                                                     </div>
                                                                 </t>
                                                             </div>
+                                                            <br/>
                                                         </div>
                                                     </div>
                                                 </t>
