@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab91fdb9-5dee-4071-8ff5-e09d96fa87f4" name="Changes" comment="aug20::commit after finalising">
+    <list default="true" id="ab91fdb9-5dee-4071-8ff5-e09d96fa87f4" name="Changes" comment="aug22:: finalised">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__manifest__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets/elearning_snippet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/elearning_snippet.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660988317191</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="aug22:: finalised">
+      <created>1661140643791</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661140643791</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,6 +143,7 @@
     <MESSAGE value="aug20::commit before mods" />
     <MESSAGE value="aug20::commit before changing cols" />
     <MESSAGE value="aug20::commit after finalising" />
-    <option name="LAST_COMMIT_MESSAGE" value="aug20::commit after finalising" />
+    <MESSAGE value="aug22:: finalised" />
+    <option name="LAST_COMMIT_MESSAGE" value="aug22:: finalised" />
   </component>
 </project>

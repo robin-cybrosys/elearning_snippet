@@ -1,6 +1,6 @@
 {
     'name': "E-Learning Snippet",
-    'author': "My Company",
+    'author': "R",
     'website': "http://www.cybrosys.com",
     'category': 'Uncategorized',
     'version': '15.0.1.0.0',

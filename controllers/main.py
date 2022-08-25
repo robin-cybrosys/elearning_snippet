@@ -10,7 +10,7 @@ class ELearning(http.Controller):
     def elearning_snippet(self, products_per_slide=3):
         course_obj = request.env['slide.channel'].sudo().search(
             [], order='create_date DESC')
-        print(course_obj, "course_obj")
+        # print(course_obj, "course_obj")
         courses = []
         for course in course_obj:
             # print(courses.read([]))
@@ -21,8 +21,7 @@ class ELearning(http.Controller):
                                                               'image_1920')
 
             courses.append(items)
-        print(courses)
-        # grouping the courses for listing in group
+        # print(courses)
         course_group = []
         course_list = []
         for index, record in enumerate(courses, 1):
